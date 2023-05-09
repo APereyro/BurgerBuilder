@@ -47,13 +47,6 @@
 
     },
     {
-        "name":"Juicy Lucy Burger",
-        "description":"The famous Juicy Lucy! American cheese and mushroom combo.",
-       "recipe":"https://www.allrecipes.com/recipe/213797/juicy-lucy-burgers/",
-       "image":"https://www.allrecipes.com/thmb/oXJ8uN6aPBSlUbDznvx6ZU-o-ak=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1384938-29e7c6e84a114ae78f0f4a2b5a912ef9.jpg"
-
-    },
-    {
         "name":"Bronco Burger",
         "description":"Roasted jalapenos, Tabasco sauce, steak sauce, pepperjack cheese, and a secret ingredient make these burgers spicy and irresistible. ",
        "recipe":"https://www.allrecipes.com/recipe/26592/bronco-burger/",
