@@ -1,0 +1,14 @@
+[
+    {
+        "name":"Black and Blue",
+        "description":"Blackened seasoning and blue cheese is a great combo.",
+        "recipe":"https://www.certifiedangusbeef.com/recipes/Black-and-Blue-Burger",
+        "image":"https://www.certifiedangusbeef.com/recipes/images/recipes/0ce41988-d726-41d3-9f88-9bc5207f332e.jpg"
+    },
+    {
+        "name":"Classic Burger",
+        "description":"All American classic burger!",
+        "recipe":"https://www.myrecipes.com/recipe/classic-burger"
+
+    }
+]
