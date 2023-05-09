@@ -20,6 +20,11 @@ Burger.init(
     },
   },
   {
+    recipe:{
+        type:DataTypes.STRING,
+    }
+  },
+  {
     image: {
       type: DataTypes.STRING,
       defaultValue:

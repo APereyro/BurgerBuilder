@@ -11,4 +11,4 @@ Favorite.init(
 );
 
 
-module.exports = Ingredient;
+module.exports = Favorite;
