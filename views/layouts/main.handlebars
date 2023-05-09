@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BurgerBuilder</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./public/css/style.css">
+  </head>
+  <body>
+    <div class="navbar bg-base-100">
+      <div class="flex-1">
+        <a class="btn btn-ghost normal-case text-xl">BurgerBuilder</a>
+      </div>
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost rounded-btn">Profile</label>
+        <ul
+          tabindex="0"
+          class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+        >
+          <li><a>New Burger</a></li>
+          <li><a>Favorites</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hero-container flex flex-wrap">
+        <div
+          class="hero min-h-screen w-full md:w-1/2"
+          style="background-image: url(./public/images/burger\ pic.jpeg)"
+        >
+      <div class="hero-overlay bg-opacity-60"></div>
+      <div class="hero-content text-center text-neutral-content">
+        <div class="max-w-md">
+          <h1 class="mb-5 text-5xl font-bold">Wlecome to Burger-Builder</h1>
+          <p class="mb-5">
+            A tool that allows users to customize and build their own burgers.
+            Users can choose from a variety of buns, meats, toppings, sauces,
+            and sides to create their perfect burger.
+          </p>
+          <button class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </div>
+
+  <div class="hero min-h-screen w-full md:w-1/2 bg-base-200">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <div class="text-center lg:text-left">
+            <h1 class="text-5xl font-bold">Login now!</h1>
+            <p class="py-6"> Sign in with your Email and Password to view some of the best burger recipes aorund town.</p>
+          </div>
+          <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div class="card-body">
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Email</span>
+                </label>
+                <input type="text" placeholder="email" class="input input-bordered" />
+              </div>
+              <div class="form-control">
+                <label class="label">
+                  <span class="label-text">Password</span>
+                </label>
+                <input type="text" placeholder="password" class="input input-bordered" />
+                <label class="label">
+                  <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                </label>
+              </div>
+              <div class="form-control mt-6">
+                <button class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <div>
+        <p>Copyright © 2023 - All right reserved by The Coding Mavericks</p>
+      </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
