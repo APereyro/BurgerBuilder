@@ -3,11 +3,10 @@ const sequelize = require("../config/connection");
 
 class Favorite extends Model {}
 
-Favorite.init(
-  {
-    sequelize,
-    timestamps: true,
-  }
+Favorite.init({},{sequelize,
+    timestamps: true,}
+
+  
 );
 
 

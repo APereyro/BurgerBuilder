@@ -3,7 +3,7 @@ const { User, Burger, Ingredient, Favorite } = require("../models");
 
 const userData = require("./userData");
 const burgerData = require("./burgerData");
-const favoriteData = require("./commentData");
+const favoriteData = require("./favoriteData");
 const ingredientData = require('./ingredientData')
 
 const seedDatabase = async () => {
