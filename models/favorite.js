@@ -5,7 +5,7 @@ class Favorite extends Model {}
 
 Favorite.init({},{sequelize,
     timestamps: true,}
-
+    
   
 );
 
