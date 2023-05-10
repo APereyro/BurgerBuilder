@@ -1,10 +1,10 @@
 [
     {
-        "UserId":1,
+        "User_Id":1,
         "BurgerId":1
     },
     {
-        "UserId":2,
+        "User_Id":2,
         "BurgerId":2
     }
 ]
