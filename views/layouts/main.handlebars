@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>BurgerBuilder</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" href="../../public/images/burger pic.jpeg">
-  </head>
-  <body>
-    <div class="navbar bg-base-100">
-      <div class="flex-1">
-        <a href="/" class="btn btn-ghost normal-case text-xl">BurgerBuilder</a>
-      </div>
-      <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost rounded-btn">Profile</label>
-        <ul
-          tabindex="0"
-          class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
-        >
-          <li><a>New Burger</a></li>
-          <li><a>Favorites</a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="flex flex-wrap">
-        {{{body}}}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BurgerBuilder</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="navbar bg-base-100">
+    <div class="flex-1">
+      <a href="/" class="btn btn-ghost normal-case text-xl">BurgerBuilder</a>
     </div>
- 
-   <footer class="footer footer-center p-4 bg-base-300 text-base-content" style="position: fixed; bottom: 0; width: 100%;">
-  <div>
-    <p>Copyright © 2023 - All right reserved by The Coding Mavericks</p>
+    <div class="dropdown dropdown-end">
+      <label tabindex="0" class="btn btn-ghost rounded-btn">Profile</label>
+      <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+        <li><a>New Burger</a></li>
+        <li><a>Favorites</a></li>
+      </ul>
+    </div>
   </div>
-</footer>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </body>
+
+  <div class="flex flex-wrap">
+    {{{body}}}
+  </div>
+
+  <footer class="footer footer-center p-4 bg-base-300 text-base-content"
+    style="position: fixed; bottom: 0; width: 100%;">
+    <div>
+      <p>Copyright © 2023 - All right reserved by The Coding Mavericks</p>
+    </div>
+  </footer>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
 </html>

@@ -4,17 +4,52 @@ html {
 
 .navbar {
   box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  background-color: #ff3131;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #f5efef;
 }
   body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    background-color: #f5efef;
+    color:#3b312e;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   main {
     flex: 1;
+    background-color: #f5efef;
   }
   
   footer {
     margin-top: auto;
   }
+
+.hero {
+  background-color: #f5efef;
+}
+
+.hero-overlay {
+background-color: #f5efef;
+color: #3b312e;
+}
+
+.max-w-md {
+  color:#3b312e;
+
+}
+
+.btn {
+background-color: #ff3131;
+}
+
+.form {
+  background-color: #f5efef;
+  color:#3b312e;
+}
+
+.label {
+  color: #3b312e;
+  background-color: #f5efef;
+}
