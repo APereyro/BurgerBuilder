@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User, Ingredient, Burger, Favorite } = require('../models');
+const { User, Ingredient, Burger, Favorite } = require('../models');
 // const withAuth = require('../utils/auth');
 
 router.get('/',async (req,res) => {
@@ -19,6 +19,16 @@ console.log(ingredientNames);  // Log the ingredient names
     ingredients: ingredientNames
   })
 })
+router.get('/results', async (req, res) => {
+  try {
+    const burgerData = await Burger.findAll();
+    const burgers = burgerData.map(burger => burger.dataValues);
+    res.render('results', { burger: burgers });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 router.get('/profile', async (req, res) => {
   try {
