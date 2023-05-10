@@ -1,6 +1,6 @@
 const signupFormHandler = async (event) => {
+  console.log('signupFormHandler function called');
     event.preventDefault();
-
     const email = document.querySelector('#email-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
   console.log(email);
@@ -45,10 +45,8 @@ const signupFormHandler = async (event) => {
     }
   };
   
-  document
-    .getElementById('login')
-    .addEventListener('submit', loginFormHandler);
-  
-  document
-    .getElementById('signup')
-    .addEventListener('submit', signupFormHandler);
+  document.addEventListener('DOMContentLoaded', function() {
+    // Your code here
+    document.getElementById('login').addEventListener('submit', loginFormHandler);
+    document.getElementById('signup').addEventListener('submit', signupFormHandler);
+  });
