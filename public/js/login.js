@@ -45,8 +45,7 @@ const signupFormHandler = async (event) => {
     }
   };
   
-  document.addEventListener('DOMContentLoaded', function() {
-    // Your code here
+    // Your code here 
+    // switch these two order to get them to work 
     document.getElementById('login').addEventListener('submit', loginFormHandler);
-    document.getElementById('signup').addEventListener('submit', signupFormHandler);
-  });
+    
