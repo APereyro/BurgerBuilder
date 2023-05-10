@@ -1,24 +1,131 @@
 [
     {
-        "name":"lettuce"
+        "name":"Lettuce"
     },
     {
-        "name":"tomato"
+        "name":"Tomato"
     },
     {
-        "name":"onion"
+        "name":"Onion"
     },
     {
-        "name":"mushroom"
+        "name":"Mushroom"
     },
     {
-        "name":"blue cheese"
+        "name":"Blue cheese"
     },
     {
-        "name":"ketchup"
+        "name":"Ketchup"
     },
     {
-        "name":"mustard"
+        "name":"Mustard"
+    },
+    {
+        "name":"Mayonnaise"
+    },
+    {
+        "name":"Eggs"
+    },
+    {
+        "name":"Bread crumbs"
+    },
+    {
+        "name":"Worcestershire"
+    },
+    {
+        "name":"Garlic"
+    },
+    {
+        "name":"Pickles"
+    },
+    {
+        "name":"Cheddar cheese"
+    },
+    {
+        "name":"basil"
+    },
+    {
+        "name":"Olive oil"
+    },
+    {
+        "name":"Mozzarella cheese"
+    },
+    {
+        "name":"Hot sauce"
+    },
+    {
+        "name":"Bacon"
+    },
+    {
+        "name":"Smoked gouda cheese"
+    },
+    {
+        "name":"BBQ sauce"
+    },
+    {
+        "name":"Chile powder"
+    },
+    {
+        "name":"jalapeno"
+    },
+    {
+        "name":"Steak sauce"
+    },
+    {
+        "name":"Oregano (Dried)"
+    },
+    {
+        "name":"Pepperjack cheese"
+    },
+    {
+        "name":"Feta Cheese"
+    },
+    {
+        "name":"lime juice"
+    },
+    {
+        "name":"Mint"
+    },
+    {
+        "name":"Parsley"
+    },
+    {
+        "name":"Spinach"
+    },
+    {
+        "name":"Cilantro"
+    },
+    {
+        "name":"Chile pepper"
+    },
+    {
+        "name":"Avocado"
+    },{
+        "name":"Gorgonzola cheese"
+    },
+    {
+        "name":"Cream cheese"
+    },
+    {
+        "name":"Horseradish"
+    },
+    {
+        "name":"Soy sauce"
+    },
+    {
+        "name":"Swiss cheese"
+    },
+    {
+        "name":"Hawaiian rolls"
+    },
+    {
+        "name":"American cheese"
+    },
+    {
+        "name":"Brown sugar"
+    },
+    {
+        "name":"Monterey jack cheese"
     }
 
 ]

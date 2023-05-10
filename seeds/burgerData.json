@@ -7,8 +7,100 @@
     },
     {
         "name":"Classic Burger",
-        "description":"All American classic burger!",
+        "description":"cant go wrong with the all American classic burger!",
         "recipe":"https://www.myrecipes.com/recipe/classic-burger"
 
+    },
+    {
+        "name":"Cheddar and Onion Smash Burger",
+        "description":"Tasty sharp cheddar and onion duo",
+        "recipe":"https://www.foodandwine.com/recipes/cheddar-and-onion-smashed-burgers",
+        "image":"https://www.foodandwine.com/thmb/GQg7INoiZq92KmWbfH_bgPqgU80=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/HD-201106-r-cheddar-onion-burger-0b10de9034c54072aedc18a4ced0284d.jpg"
+
+    },
+    {
+        "name":"Caprese Burger",
+        "description":"The delicious flavors of a caprese salad — basil, tomato, and mozzarella — are captured in these juicy burgers.",
+       "recipe":"https://www.foodandwine.com/recipes/caprese-burgers",
+       "image":"https://www.foodandwine.com/thmb/jvmlB_zJdDxvlWBBZg0iCLkYa_M=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/201208-HD-caprese-burgers-5801d232e86945d899406389b0014acb.jpg"
+
+    },
+    {
+        "name":"Smoked Gouda and Bacon Burger with Barbecue Sauce",
+        "description":"This smoky patty melt features smoked Gouda cheese, hot sauce-spiked onions, and sweet homemade barbecue sauce.",
+       "recipe":"https://www.foodandwine.com/recipes/smoked-gouda-and-bacon-burgers-barbecue-sauce",
+       "image":"https://www.foodandwine.com/thmb/sHm63qU5br5soUKomE_wsFUnu9s=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/HD-201206-r-smoked-gouda-and-bacon-burgers-with-barbecue-sauce-9a9f773d6af843a5a54541677afbf7a8.jpg"
+
+    },
+    {
+        "name":"Sunnyside Burger with Chipotle Aioli",
+        "description":"The combination of the egg and the aioli makes this burger special.",
+       "recipe":"https://www.allrecipes.com/recipe/247237/sunnyside-burger-with-chipotle-aioli/",
+       "image":"https://www.allrecipes.com/thmb/-H2zZmrZhKC8zwiu4Y7kzTvWDl4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Sunnyside-Burger-with-Chipotle-Aioli-2000-a5be988651694555b22e6900c4866a6e.jpg"
+
+    },
+    {
+        "name":"Juicy Lucy Burger",
+        "description":"The famous Juicy Lucy! American cheese and mushroom combo.",
+       "recipe":"https://www.allrecipes.com/recipe/213797/juicy-lucy-burgers/",
+       "image":"https://www.allrecipes.com/thmb/oXJ8uN6aPBSlUbDznvx6ZU-o-ak=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1384938-29e7c6e84a114ae78f0f4a2b5a912ef9.jpg"
+
+    },
+    {
+        "name":"Bronco Burger",
+        "description":"Roasted jalapenos, Tabasco sauce, steak sauce, pepperjack cheese, and a secret ingredient make these burgers spicy and irresistible. ",
+       "recipe":"https://www.allrecipes.com/recipe/26592/bronco-burger/",
+       "image":"https://www.allrecipes.com/thmb/H-lCpWAvJpU5Mb1tY9oig8n3GAQ=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/829371-9fccf0c985d4499d90e0b2931801b003.jpg"
+
+    },
+    {
+        "name":"Loaded Greek Burger",
+        "description":"Tired of plain old 'burgers for summertime? Mix it up a bit by adding some classic Greek flavor: spinach, feta, roasted red pepper, and herbs...Yum!",
+       "recipe":"https://www.allrecipes.com/recipe/200404/loaded-greek-burgers/",
+       "image":"https://www.allrecipes.com/thmb/x2YONQZhfCzGVRi_DWl0Klu9hOs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/397470-482a3473e7694a02bce494305cf5dbe8.jpg"
+
+    },
+    {
+        "name":"Hamburguesas Mexicanas",
+        "description":"These Mexican-inspired burger.",
+       "recipe":"https://www.allrecipes.com/recipe/222278/hamburguesas-mexicanas/",
+       "image":"https://www.allrecipes.com/thmb/l7OkdcjlPZY2W9tlgc6eNbdEPZY=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1018612-510cd7a7d2de4d829b9eb517b1980e9f.jpg"
+
+    },
+    {
+        "name":"Grilled Gorgonzola-Basil Burger",
+        "description":"These burgers combine fresh basil, Gorgonzola cheese, and garlic, and it's easy enough for a quick and simple dinner.",
+       "recipe":"https://www.allrecipes.com/recipe/142878/grilled-gorgonzola-basil-burgers/",
+       "image":"https://www.allrecipes.com/thmb/HcQFBB9WWMKOka8apQqlx_UpzoA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/1118907-09d921d195324e50a679c667cf6e5391.jpg"
+
+    },
+    {
+        "name":"Cream Cheese Jalapeno Hamburger",
+        "description":"Delicious and spicy!",
+       "recipe":"https://www.allrecipes.com/recipe/52501/cream-cheese-jalapeno-hamburgers/",
+       "image":"https://www.allrecipes.com/thmb/k2agktTVv7ZQAMa5UuV4OeQmj5I=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Cream-Cheese-Jalapeno-Hamburgers-b2acf348477c4ea3ac1f372b1af78b49.jpg"
+
+    },
+    {
+        "name":"Cheddar Bacon Hamburgers with Horseradish",
+        "description":"Horseradish adds a real zing to burgers with Cheddar cheese and bacon mixed right in.",
+       "recipe":"https://www.allrecipes.com/recipe/233067/cheddar-bacon-hamburgers-with-horseradish/",
+       "image":"https://www.allrecipes.com/thmb/fpC3sz75AxVmUS_hkd_OZpMZjyE=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/4025343-ca9c76f0a59344c488dd266c02b14bdb.jpg"
+
+    },
+    {
+        "name":"Grilled Mushroom Swiss Burger",
+        "description":"Classic mushroom swiss burger.",
+       "recipe":"https://www.allrecipes.com/recipe/36058/grilled-mushroom-swiss-burgers/",
+       "image":"https://www.allrecipes.com/thmb/HM7CfXbHXOe-Aryg2iC7Xf9xRyg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/752223-d95174da133a4b2db7b4b3f05d544b25.jpg"
+
+    },
+    {
+        "name":"Cheeseburger Sliders",
+        "description":"They are so mini!",
+       "recipe":"https://www.allrecipes.com/recipe/277748/cheeseburger-sliders/",
+       "image":"https://www.allrecipes.com/thmb/8kOTL52dwVWQWdOd4Ayq4VSzJ2c=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8452803-1b9aaa9777dc4a959cb621918b7ede36.jpg"
+
     }
+
 ]
