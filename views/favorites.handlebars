@@ -1,5 +1,6 @@
-    <div class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
-        <figure><img src="./public/images/defaultburger.jpg" alt="burger" class="mt-2 rounded"/></figure>
+    <container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
+      {{#each favorite}}
+        <figure><img src="{{}}" alt="burger" class="mt-2 rounded"/></figure>
         <div class="card-body">
           <h2 class="card-title text-secondary ">Plain CheeseBurger</h2>
           <p class="text-secondary">Seasame Bun 100% Angus Beef topped with cheddar cheese, Tomatoes, and Lettuce.</p>
@@ -7,4 +8,5 @@
             <button class="btn btn-primary">Remove From Favorites</button>
           </div>
         </div>
-      </div>
+        {{/each}}
+    </container>
