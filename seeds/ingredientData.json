@@ -24,9 +24,6 @@
         "name":"Mayonnaise"
     },
     {
-        "name":"Blue cheese"
-    },
-    {
         "name":"Eggs"
     },
     {
@@ -120,6 +117,15 @@
     },
     {
         "name":"Hawaiian rolls"
+    },
+    {
+        "name":"American cheese"
+    },
+    {
+        "name":"Brown sugar"
+    },
+    {
+        "name":"Monterey jack cheese"
     }
 
 ]
