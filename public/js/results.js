@@ -13,9 +13,15 @@ const findFavorite = async (e) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ burgerId: selectedBurger }),
-    })
+    });
     const data = await response.json();
     console.log(data);
+    console.log(data.message)
+    if ((data.message == 1)) {
+      console.log("200 response");
+    } else {
+      console.log("400 response");
+    }
   }
 };
 
