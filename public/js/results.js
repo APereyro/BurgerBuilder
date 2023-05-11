@@ -13,8 +13,9 @@ const findFavorite = async (e) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ burgerId: selectedBurger }),
-    });
-    const data = response.console.log(response);
+    })
+    const data = await response.json();
+    console.log(data);
   }
 };
 
