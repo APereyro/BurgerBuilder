@@ -27,6 +27,14 @@ console.log(__dirname)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname,'public')));
+// app.use(express.static('public', { 
+//   setHeaders: (res, path, stat) => {
+//     if (path.endsWith('.css')) {
+//       res.setHeader('Content-Type', 'text/css');
+//     }
+//   }
+// }));
+
 
 app.use(routes);
 

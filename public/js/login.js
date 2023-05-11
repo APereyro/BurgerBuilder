@@ -38,15 +38,14 @@ const signupFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/ingredients');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
     }
   };
   
-  document.addEventListener('DOMContentLoaded', function() {
-    // Your code here
+    // Your code here 
+    // switch these two order to get them to work 
     document.getElementById('login').addEventListener('submit', loginFormHandler);
-    document.getElementById('signup').addEventListener('submit', signupFormHandler);
-  });
+    
