@@ -29,6 +29,7 @@ body {
 }
 
 
+
 .dropdown-content {
   background-color: #ff3131;
   color: #f5efef;
@@ -87,7 +88,7 @@ img {
 }
 
 .btn-primary {
-  color: #3b312e;
+  color: #f5efef;
   background-color: #ff3131;
 }
 
@@ -113,6 +114,7 @@ img {
 .card {
   color: #3b312e;
   background-color: #f5efef;
+  margin-top: 6rem;
 }
 
 .input {
@@ -123,4 +125,14 @@ img {
 .footer {
   background-color: #3b312e;
   color: #f5efef;
+}
+
+.card.mt-3 {
+  margin-top: 6rem;
+}
+
+.card .btn-primary {
+  margin-right: 15px;
+  margin-top: 15px;
+  color:#f5efef;
 }
