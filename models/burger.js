@@ -24,7 +24,14 @@ Burger.init({
     ingredients:{
       type: DataTypes.STRING,
       allowNull:true,
+      },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model : "users",
+        key: "id"
       }
+    }
   }, {
     sequelize,
     timestamps: true,
