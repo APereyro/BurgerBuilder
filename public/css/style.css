@@ -7,6 +7,7 @@ html {
   background-color: #ff3131;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #f5efef;
+  padding-bottom: 0px;
 }
   body {
     display: flex;
