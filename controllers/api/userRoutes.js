@@ -68,30 +68,33 @@ router.post("/favorite", async (req, res) => {
       attributes: ["BurgerId"],
       raw: true,
     });
-    console.log(pastFavorite);
-    const userPastFavoriteArray = pastFavorite.map((burger) => {
-      return burger.BurgerId;
-    });
-    console.log(userPastFavoriteArray);
-    console.log(burgerNumber);
-    console.log(userPastFavoriteArray.includes(burgerNumber))
 
-    // if (userPastFavoriteArray.includes(req.body.burgerId)) {
-    //   res.status(400).json({ message: "duplicate" });
-    // } else {
-    //   const favoriteObject = {
-    //     userId: req.session.user_id,
-    //     BurgerId: req.body.burgerId,
-    //   };
-    //   const favoriteIsTrue = await Favorite.create(favoriteObject);
-    //   console.log(favoriteIsTrue);
-    //   if (!favoriteIsTrue) {
-    //     res.status(400);
-    //   } else {
-    //     res.status(200).json({ message: "Favorite Added!" });
-    //   }
-    // }
-    //creating object to create with user id from session and burger id from results.js
+    let isNew = true;
+    pastFavorite.forEach(burger=>{
+      if(burger.BurgerId == burgerNumber ){
+        isNew = false
+      }
+    })
+    console.log(isNew);
+    
+    console.log(burgerNumber);
+
+    if (!isNew) {
+      res.status(400).json({ message: "duplicate" });
+    } else {
+      const favoriteObject = {
+        userId: req.session.user_id,
+        BurgerId: req.body.burgerId,
+      };
+      const favoriteIsTrue = await Favorite.create(favoriteObject);
+      console.log(favoriteIsTrue);
+      if (!favoriteIsTrue) {
+        res.status(400);
+      } else {
+        res.status(200).json({ message: "Favorite Added!" });
+      }
+    }
+    // creating object to create with user id from session and burger id from results.js
     console.log(req.body);
   } catch (err) {
     res.status(400).json(err);
