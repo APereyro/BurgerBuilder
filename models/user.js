@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
+const Burger = require("./burger");
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -44,5 +45,15 @@ User.init(
     modelName: 'user',
   }
 );
+
+User.sync()
+.then((result) => {
+    console.log(result, "synchronized");
+})
+.catch((err) => {
+    console.log("DB Sync Error: ", err)
+}
+);
+
 
 module.exports = User;

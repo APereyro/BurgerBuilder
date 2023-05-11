@@ -15,5 +15,13 @@ Ingredient.init({
   
 );
 
+Ingredient.sync()
+.then((result) => {
+    console.log(result, "synchronized");
+})
+.catch((err) => {
+    console.log("DB Sync Error: ", err)
+}
+);
 
 module.exports = Ingredient;
