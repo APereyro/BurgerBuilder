@@ -1,16 +1,30 @@
-  <container class="flex mx-4 mb-4 mt-2">
-  {{#each ingredients}}
-    <div class="card w-32 bg-info shadow-xl mx-4">
-      <div class="card-body">
-        <div class="card-actions justify-end">
-          <input type="checkbox" id="{{this}}" class="checkbox-primary" />
-        </div>
-        <p class="text-secondary">{{this}}</p>
-      </div>
+<container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
+  <form name="burger-form" id= "burger" action="submit">
+    <input
+      required="true"
+      type="text"
+      placeholder="Name"
+      id="name"
+      class="input input-bordered input-md w-full max-w-xs"
+    />
+    <input
+      required="true"
+      type="text"
+      placeholder="Description"
+      id="description"
+      class="input input-bordered input-md w-full max-w-xs"
+    />
+    <input
+      required="true"
+      type="text"
+      placeholder="Ingredients"
+      id="ingredients"
+      class="input input-bordered input-md w-full max-w-xs"
+    />
+    <div class="card-actions justify-end">
+      <button type="submit" class="btn btn-primary">Post Recipe</button>
     </div>
-  {{/each}}
+  </form>
 </container>
 
- <div style="display:flex; justify-content:center; padding:5px;">
-                        <button class="btn btn-wide">Submit</button>
-                      </div>
+<script src="./js/post.js"></script>

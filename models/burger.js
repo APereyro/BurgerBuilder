@@ -14,6 +14,11 @@ Burger.init({
     },
     recipe: {
       type: DataTypes.STRING,
+      allowNull:true,
+    },
+    ingredients:{
+    type: DataTypes.STRING,
+    allowNull:true,
     },
     image: {
       type: DataTypes.STRING,
