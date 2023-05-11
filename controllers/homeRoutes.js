@@ -11,14 +11,9 @@ router.get('/signup', async (req,res) =>{
 })
 
 router.get('/ingredients', async (req,res) =>{
-  const ingredientData = await Ingredient.findAll()
-// Extract the names of the ingredients
-const ingredientNames = ingredientData.map(ingredient => ingredient.dataValues.name);
-console.log(ingredientNames);  // Log the ingredient names
-  res.render("ingredients",{
-    ingredients: ingredientNames
-  })
-})
+  res.render("ingredients")
+});
+
 router.get('/results', async (req, res) => {
   try {
     const burgerData = await Burger.findAll();

@@ -5,6 +5,10 @@ const { User } = require('../../models')
 //     res.send("hello")
 // })
 
+router.post("/makerecipe", async (req,res) => {
+  console.log(req.body);
+})
+
 router.post("/", async (req,res) => {
     console.log(req.body);
     try {
