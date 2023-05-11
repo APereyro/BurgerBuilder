@@ -1,30 +1,42 @@
 html {
-    height: 100%;
-  }
+  height: 100%;
+}
 
 .navbar {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   background-color: #ff3131;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #f5efef;
   padding-bottom: 0px;
 }
-  body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: #f5efef;
-    color:#3b312e;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    zoom: 105%;
-  }
-  
-  main {
-    flex: 1;
-    background-color: #f5efef;
-  }
-  
-  /* footer {
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f5efef;
+  color: #3b312e;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  zoom: 105%;
+}
+
+
+.dropdown-content {
+  background-color: #ff3131;
+  color: #f5efef;
+}
+
+.dropdown-content:hover {
+  background-color: #3b312e;
+  color:#f5efef;
+}
+
+main {
+  flex: 1;
+  background-color: #f5efef;
+}
+
+/* footer {
     margin-top: auto;
   } */
 
@@ -34,10 +46,10 @@ html {
 }
 
 .hero-overlay {
-background-image: url(/images/leftdivbg.png);
-background-size: cover;
-background-position: center;
-color: #3b312e;
+  background-image: url(/images/leftdivbg.png);
+  background-size: cover;
+  background-position: center;
+  color: #3b312e;
 }
 
 
@@ -47,33 +59,40 @@ color: #3b312e;
 
 
 .max-w-md {
-  color:#3b312e;
-  
-  
+  color: #3b312e;
+}
 
-
+.container.flex.mx-4 {
+  margin-top: 7.5rem;
 }
 
 .btn {
-background-color: #ff3131;
+  background-color: #ff3131;
 
 }
+
 .btn.btn-primary {
   background-color: #ff3131;
 }
+
 .btn-primary {
-  color:#3b312e;
+  color: #3b312e;
   background-color: #ff3131;
 }
+
 .btn-primary:hover {
   background-color: #3b312e;
-  color:#f5efef;
+  color: #f5efef;
 }
 
 .form {
   background-color: #f5efef;
-  color:#3b312e;
+  color: #3b312e;
 }
+
+/* .flex-wrap {
+  margin-top: 7.5rem;
+} */
 
 .label {
   color: #3b312e;
@@ -81,16 +100,16 @@ background-color: #ff3131;
 }
 
 .card {
-  color:#3b312e;
+  color: #3b312e;
   background-color: #f5efef;
 }
 
 .input {
   background-color: #f5efef;
-  color:#3b312e;
+  color: #3b312e;
 }
 
 .footer {
   background-color: #3b312e;
-  color:#f5efef;
+  color: #f5efef;
 }
