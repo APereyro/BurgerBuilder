@@ -23,7 +23,6 @@ router.get('/results', async (req, res) => {
   try {
     const burgerData = await Burger.findAll();
     const burgers = burgerData.map(burger => burger.dataValues);
-    console.log(burgers);
     res.render('results', { burger: burgers });
   } catch (error) {
     console.error(error);

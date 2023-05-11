@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models')
+const { User, Favorite } = require('../../models')
 
 // router.get("/", async (req,res) => {
 //     res.send("hello")
@@ -53,6 +53,28 @@ router.post("/", async (req,res) => {
         res.status(400).json(err);
       }
     });
+     
+    //favorites route for creating new entry into favorites table. We get burger id from fetch from results.js
+    router.post('/favorite', async (req, res) => {
+      try {
+          //creating object to create with user id from session and burger id from results.js
+          console.log(req.body)
+        const favoriteObject = {
+          "userId":req.session.user_id,
+          "BurgerId":req.body.burgerId
+        };
+        const favoriteIsTrue =await Favorite.create(favoriteObject);
+        console.log(favoriteIsTrue);
+        if(!favoriteIsTrue){
+          res.status(400)
+        }else{
+          res.status(200)
+        }
+      } catch (err) {
+        res.status(400).json(err);
+      }
+    });
+
     
 
 module.exports = router;
