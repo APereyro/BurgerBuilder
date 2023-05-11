@@ -36,9 +36,12 @@ main {
   background-color: #f5efef;
 }
 
-/* footer {
-    margin-top: auto;
-  } */
+img {
+    margin-left: 15px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
 
 .hero {
   /* background-color: #f5efef; */
