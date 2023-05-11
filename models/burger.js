@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-
+const { User } = require('../models')
 class Burger extends Model {}
 
 Burger.init({
@@ -24,12 +24,28 @@ Burger.init({
     ingredients:{
       type: DataTypes.STRING,
       allowNull:true,
+      },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model : "users",
+        key: "id"
       }
+    }
   }, {
     sequelize,
     timestamps: true,
   });
   
+
+  Burger.sync()
+  .then((result) => {
+      console.log(result, "synchronized");
+  })
+  .catch((err) => {
+      console.log("DB Sync Error: ", err)
+  }
+  );
 
 
 module.exports = Burger;

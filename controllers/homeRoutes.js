@@ -47,4 +47,30 @@ router.get('/favorites', async (req, res) => {
   }
 });
 
+router.get("/mine", async (req, res) => {
+
+  console.log("PARAM: ", req.session);
+
+  const { user_id } = req.session
+
+  try {
+    // const userId = req.query;
+    const burgerData = await Burger.findAll({
+      where: {
+        user_id: user_id
+      }
+    });
+    console.log(burgerData.map(burger => burger.toJSON()));
+    // res.json(burgerData);
+    res.render('mine', {
+      burger: burgerData.map(burger => burger.toJSON())
+    });
+    
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
+})
+
 module.exports = router;
