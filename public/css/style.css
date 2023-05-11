@@ -8,7 +8,15 @@ html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #f5efef;
   padding-bottom: 0px;
+  position: fixed;
+} 
+
+@media (max-width: 768px) {
+  .navbar {
+    position:relative;
+  } 
 }
+
 
 body {
   display: flex;
@@ -19,6 +27,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   zoom: 105%;
 }
+
 
 
 .dropdown-content {
@@ -36,9 +45,12 @@ main {
   background-color: #f5efef;
 }
 
-/* footer {
-    margin-top: auto;
-  } */
+img {
+    margin-left: 15px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
 
 .hero {
   /* background-color: #f5efef; */
@@ -76,7 +88,7 @@ main {
 }
 
 .btn-primary {
-  color: #3b312e;
+  color: #f5efef;
   background-color: #ff3131;
 }
 
@@ -102,6 +114,7 @@ main {
 .card {
   color: #3b312e;
   background-color: #f5efef;
+  margin-top: 6rem;
 }
 
 .input {
@@ -134,3 +147,14 @@ main {
 }
 
 /* end */
+
+.card.mt-3 {
+  margin-top: 6rem;
+}
+
+.card .btn-primary {
+  margin-right: 15px;
+  margin-top: 15px;
+  color:#f5efef;
+}
+
