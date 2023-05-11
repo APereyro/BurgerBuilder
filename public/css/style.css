@@ -15,6 +15,7 @@ html {
     background-color: #f5efef;
     color:#3b312e;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    zoom: 105%;
   }
   
   main {
@@ -27,21 +28,45 @@ html {
   }
 
 .hero {
-  background-color: #f5efef;
+  /* background-color: #f5efef; */
+  background-image: url(/images/rightdivbg.png);
 }
 
 .hero-overlay {
-background-color: #f5efef;
+background-image: url(/images/leftdivbg.png);
+background-size: cover;
+background-position: center;
 color: #3b312e;
 }
 
+
+.hero-content {
+  top: -30px;
+}
+
+
 .max-w-md {
   color:#3b312e;
+  
+  
+
 
 }
 
 .btn {
 background-color: #ff3131;
+
+}
+.btn.btn-primary {
+  background-color: #ff3131;
+}
+.btn-primary {
+  color:#3b312e;
+  background-color: #ff3131;
+}
+.btn-primary:hover {
+  background-color: #3b312e;
+  color:#f5efef;
 }
 
 .form {
@@ -52,4 +77,19 @@ background-color: #ff3131;
 .label {
   color: #3b312e;
   background-color: #f5efef;
+}
+
+.card {
+  color:#3b312e;
+  background-color: #f5efef;
+}
+
+.input {
+  background-color: #f5efef;
+  color:#3b312e;
+}
+
+.footer {
+  background-color: #3b312e;
+  color:#f5efef;
 }
