@@ -8,7 +8,15 @@ html {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #f5efef;
   padding-bottom: 0px;
+  position: fixed;
+} 
+
+@media (max-width: 768px) {
+  .navbar {
+    position:relative;
+  } 
 }
+
 
 body {
   display: flex;
@@ -36,9 +44,12 @@ main {
   background-color: #f5efef;
 }
 
-/* footer {
-    margin-top: auto;
-  } */
+img {
+    margin-left: 15px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
 
 .hero {
   /* background-color: #f5efef; */
