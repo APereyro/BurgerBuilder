@@ -16,29 +16,13 @@ router.post("/", async (req,res) => {
 
     try {
       const create = await Burger.create(data);
-      console.log(create);
+      console.log(create.toJSON());
     } catch (error) {
       console.log(error);
       res.status(400).json(error);
     }
   })
 
-  router.get("/getMine", async (req, res) => {
-    console.log("IM HIT");
-    console.log(req.query);
-    try {
-      const userId = req.query;
-      const burgerData = await Burger.findAll({
-        where: {
-          user_id: userId
-        }
-      });
-      console.log(burgerData);
-      res.json(burgerData);
-    } catch (error) {
-      console.log(error);
-      res.status(500).json(error);
-    }
-  })
+
 
 module.exports = router;
