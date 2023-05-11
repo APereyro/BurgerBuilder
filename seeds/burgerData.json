@@ -3,7 +3,8 @@
         "name":"Black and Blue",
         "description":"Blackened seasoning and blue cheese is a great combo.",
         "recipe":"https://www.certifiedangusbeef.com/recipes/Black-and-Blue-Burger",
-        "image":"https://www.certifiedangusbeef.com/recipes/images/recipes/0ce41988-d726-41d3-9f88-9bc5207f332e.jpg"
+        "image":"https://www.certifiedangusbeef.com/recipes/images/recipes/0ce41988-d726-41d3-9f88-9bc5207f332e.jpg",
+        "ingredients":"lettuce tomato"
     },
     {
         "name":"Classic Burger",
@@ -101,6 +102,29 @@
        "recipe":"https://www.allrecipes.com/recipe/277748/cheeseburger-sliders/",
        "image":"https://www.allrecipes.com/thmb/8kOTL52dwVWQWdOd4Ayq4VSzJ2c=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8452803-1b9aaa9777dc4a959cb621918b7ede36.jpg"
 
+    },
+    {
+        "name":"Basic Cheeseburger",
+        "description":"Tasty combination of meat and your choice of cheese!",
+       "recipe":"https://www.beefitswhatsfordinner.com/recipes/recipe/3890/classic-beef-cheeseburgers",
+       "image":"https://embed.widencdn.net/img/beef/1akcqwmdqs/960x720px/classic-beef-cheeseburgers-horizontal.tif?keep=c&u=7fueml"
+
+    },
+    {
+        "name":"Plain Burger",
+        "description":"Got meat and some buns? Throw together a juicy burger!",
+       "recipe":"https://www.inspiredtaste.net/23659/no-fuss-hamburger-recipe/#itr-recipe-23659",
+       "image":"https://www.inspiredtaste.net/wp-content/uploads/2016/08/Easy-Homemade-Hamburger-Recipe-1-1200.jpg"
+
+    },
+    {
+        "name":"Avocado Burger",
+        "description":"Classic burger with some avocado thrown on top.",
+       "recipe":"https://www.burgerartist.com/recipe/avocado-burger/",
+       "image":"https://www.burgerartist.com/wp-content/uploads/2016/09/avocado-burger-thumb2-300x300.jpg"
+
     }
+
+
 
 ]

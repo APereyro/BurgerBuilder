@@ -9,5 +9,14 @@ BurgerIngredient.init({},{
   });
   
 
+  BurgerIngredient.sync()
+  .then((result) => {
+      console.log(result, "synchronized");
+  })
+  .catch((err) => {
+      console.log("DB Sync Error: ", err)
+  }
+  );
+
 
 module.exports = BurgerIngredient;

@@ -13,20 +13,33 @@ app.engine('handlebars',exphbs());
 app.set('view engine', 'handlebars')
 
 const sess = {
-  secret: "secret",
-  cookie: {},
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 3000000000,
+    httpOnly: true,
+    secure: false,
+    sameSite: 'strict',
+  },
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize,
-  }),
+    db: sequelize
+  })
 };
-
 app.use(session(sess));
+
 console.log(__dirname)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname,'public')));
+// app.use(express.static('public', { 
+//   setHeaders: (res, path, stat) => {
+//     if (path.endsWith('.css')) {
+//       res.setHeader('Content-Type', 'text/css');
+//     }
+//   }
+// }));
+
 
 app.use(routes);
 

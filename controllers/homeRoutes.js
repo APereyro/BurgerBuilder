@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Project, User, Ingredient} = require('../models');
+const { User, Ingredient, Burger, Favorite } = require('../models');
 // const withAuth = require('../utils/auth');
 
 router.get('/',async (req,res) => {
@@ -11,14 +11,66 @@ router.get('/signup', async (req,res) =>{
 })
 
 router.get('/ingredients', async (req,res) =>{
-  const ingredientData = await Ingredient.findAll()
-// Extract the names of the ingredients
-const ingredientNames = ingredientData.map(ingredient => ingredient.dataValues.name);
+  res.render("ingredients")
+});
 
-console.log(ingredientNames);  // Log the ingredient names
-  res.render("ingredients",{
-    ingredients: ingredientNames
-  })
+router.get('/results', async (req, res) => {
+  try {
+    const burgerData = await Burger.findAll();
+    const burgers = burgerData.map(burger => burger.dataValues);
+    res.render('results', { burger: burgers });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+router.get('/profile', async (req, res) => {
+  try {
+    const burgerData = await Burger.findAll();
+    const burgers = burgerData.map(burger => burger.dataValues);
+    res.render('profile', { burger: burgers });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+router.get('/favorites', async (req, res) => {
+  try {
+    const favoritesData = await Favorite.findAll();
+    const favorites = favoritesData.map(favorite => favorite.dataValues);
+    res.render('favorites', { favorites });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+router.get("/mine", async (req, res) => {
+
+  console.log("PARAM: ", req.session);
+
+  const { user_id } = req.session
+
+  try {
+    // const userId = req.query;
+    const burgerData = await Burger.findAll({
+      where: {
+        user_id: user_id
+      }
+    });
+    console.log(burgerData.map(burger => burger.toJSON()));
+    // res.json(burgerData);
+    res.render('mine', {
+      burger: burgerData.map(burger => burger.toJSON())
+    });
+    
+
+  } catch (error) {
+    console.log(error);
+    res.status(500).json(error);
+  }
 })
 
 module.exports = router;
