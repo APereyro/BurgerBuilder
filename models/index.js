@@ -1,13 +1,20 @@
-const  Burger = require('./burger')
-const Favorite = require('./favorite')
-const Ingredient = require('./ingredient')
-const User = require('./user')
-const BurgerIngredient = require('./burgerIngredient')
+const Burger = require("./burger");
+const Favorite = require("./favorite");
+const Ingredient = require("./ingredient");
+const User = require("./user");
+const BurgerIngredient = require("./burgerIngredient");
 
 // User-Burger association
-User.hasMany(Burger);
-Burger.belongsTo(User);
 
+Burger.belongsTo(User, {
+    foreignKey: "user_id",
+  });
+  
+  User.hasMany(Burger, {
+    foreignKey: "user_id",
+    onDelete: "CASCADE",
+  });
+  
 // Burger-Ingredient association
 Burger.belongsToMany(Ingredient, { through: BurgerIngredient });
 Ingredient.belongsToMany(Burger, { through: BurgerIngredient });
@@ -17,4 +24,5 @@ Favorite.belongsTo(User);
 Favorite.belongsTo(Burger);
 
 
-module.exports = {User,Burger,Ingredient,Favorite, BurgerIngredient}
+
+module.exports = { User, Burger, Ingredient, Favorite, BurgerIngredient };
