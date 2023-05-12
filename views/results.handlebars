@@ -1,5 +1,5 @@
+{{#each burger}}
     <container id="resultsContainer" class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
-      {{#each burger}}
         <figure><img src="{{image}}" alt="burger" class="mt-2 rounded"/></figure>
         <div class="card-body">
           <h2 class="card-title text-secondary ">{{name}}</h2>
@@ -9,6 +9,6 @@
             <button class="btn btn-primary" name="{{id}}">Save Recipe</button>
           </div>
         </div>
-        {{/each}}
     </container>
+        {{/each}}
     <script src="./js/results.js"></script>

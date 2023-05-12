@@ -9,10 +9,14 @@ html {
   color: #f5efef;
   padding-bottom: 0px;
   position: fixed;
+  z-index: 1000;
 } 
 
 @media (max-width: 768px) {
   .navbar {
+    position:relative;
+  }
+  .footer {
     position:relative;
   } 
 }
@@ -33,6 +37,7 @@ body {
 .dropdown-content {
   background-color: #ff3131;
   color: #f5efef;
+  z-index: 1;
 }
 
 .dropdown-content:hover {
@@ -102,9 +107,10 @@ img {
   color: #3b312e;
 }
 
-/* .flex-wrap {
-  margin-top: 7.5rem;
-} */
+.flex-wrap {
+  flex-wrap:wrap;
+  background-color: #f5efef;
+} 
 
 .label {
   color: #3b312e;
@@ -127,12 +133,40 @@ img {
   color: #f5efef;
 }
 
+
 .card.mt-3 {
   margin-top: 6rem;
 }
 
 .card .btn-primary {
-  margin-right: 15px;
+  margin-right: 150px;
   margin-top: 15px;
   color:#f5efef;
 }
+
+.card figure {
+  width: 96%;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card-body .d-flex {
+  color:#3b312e;
+}
+
+
+.burger-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  margin-bottom: 20px;
+}
+
+.burger-container figure {
+  margin-right: 20px;
+  background-color: #f5efef;
+}
+
