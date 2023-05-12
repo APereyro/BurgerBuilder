@@ -10,7 +10,7 @@ The BurgerBuilder App is a web application that allows users to sign up, create 
 
 ![Screenshot (66)](https://github.com/APereyro/BurgerBuilder/assets/124737955/566cc435-763b-4198-9ea4-e98ea041ae29)
 
-![Screenshot (67)](https://github.com/APereyro/BurgerBuilder/assets/124737955/40ac6a22-76c2-4aff-aaa3-7adba5d4dfd3)
+![Screenshot (68)](https://github.com/APereyro/BurgerBuilder/assets/124737955/8a01ae36-dbe4-41e9-b5c5-b8e7803961a6)
 
 ## Table of Contents
 
