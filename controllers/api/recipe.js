@@ -57,24 +57,25 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// router.delete('/:id', withAuth, async (req, res) => {
-//   try {
-//     const burgerData = await Burger.destroy({
-//       where: {
-//         id: req.params.id,
-//         user_id: req.session.user_id,
-//       },
-//     });
+router.delete('/:id', async (req, res) => {
+  console.log("im hit");
+  console.log(req.params);
+  try {
+    const burgerData = await Burger.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
 
-//     if (!burgerData) {
-//       res.status(404).json({ message: 'No burger found with this id!' });
-//       return;
-//     }
+    if (!burgerData) {
+      res.status(404).json({ message: 'No burger found with this id!' });
+      return;
+    }
 
-//     res.status(200).json(burgerData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.status(200).json(burgerData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
