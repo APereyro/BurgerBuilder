@@ -152,10 +152,17 @@ img {
   display: flex;
 }
 
-.card-body .d-flex {
+.card-body {
   color:#3b312e;
 }
 
+.text-secondary {
+  color:#3b312e;
+}
+
+.text-third {
+  color:#ff3131;
+}
 
 .burger-container {
   display: flex;
