@@ -1,0 +1,33 @@
+<container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
+  <form name="update-form" id= "update" action="submit">
+    <input
+    type="hidden"
+    id="burger-id"
+    value= "{{id}}"
+    />
+    <input
+      required="true"
+      type="text"
+      placeholder="Name"
+      id="name"
+      class="input input-bordered input-md w-full max-w-xs"
+    />
+    <input
+      required="true"
+      type="text"
+      placeholder="Description"
+      id="description"
+      class="input input-bordered input-md w-full max-w-xs"
+    />
+    <input
+      required="true"
+      type="text"
+      placeholder="Ingredients"
+      id="ingredients"
+      class="input input-bordered input-md w-full max-w-xs"
+    />
+      <button  type="submit" class="btn btn-primary card-actions justify-end" >Update Recipe</button>
+  </form>
+</container>
+
+<script src="/js/update.js"></script>

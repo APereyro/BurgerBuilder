@@ -3,20 +3,20 @@ const sequelize = require("../config/connection");
 
 class BurgerIngredient extends Model {}
 
-BurgerIngredient.init({},{
+BurgerIngredient.init(
+  {},
+  {
     sequelize,
     timestamps: true,
-  });
-  
+  }
+);
 
-  BurgerIngredient.sync()
+BurgerIngredient.sync()
   .then((result) => {
-      console.log(result, "synchronized");
+    console.log(result, "synchronized");
   })
   .catch((err) => {
-      console.log("DB Sync Error: ", err)
-  }
-  );
-
+    console.log("DB Sync Error: ", err);
+  });
 
 module.exports = BurgerIngredient;
