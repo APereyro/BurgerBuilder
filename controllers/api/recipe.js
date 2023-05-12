@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
   try {
     const create = await Burger.create(data);
     console.log(create.toJSON());
+    res.status(200).json({message:1});
   } catch (error) {
     console.log(error);
     res.status(400).json(error);
