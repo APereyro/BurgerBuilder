@@ -3,7 +3,6 @@ const { User, Favorite } = require("../../models");
 
 const session = require("express-session");
 
-
 router.post("/makerecipe", async (req, res) => {
   console.log(req.body);
 });
@@ -53,20 +52,47 @@ router.post("/login", async (req, res) => {
   }
 });
 
-//favorites route for creating new entry into favorites table. We get burger id from fetch from results.js
-// router.post("/favorite", async (req, res) => {
-//   try {
-//     //checking for duplicate favorites
-//     const burgerNumber = req.body.burgerId 
-//     const pastFavorite = await Favorite.findAll({
-//       where: { userId: req.session.user_id },
-//       attributes: ["BurgerId"],
-//       raw: true,
-//     });
-//   } catch (err) {
-//     res.status(400).json(err);
-//   }
-// });
+// favorites route for creating new entry into favorites table. We get burger id from fetch from results.js
+router.post("/favorite", async (req, res) => {
+  try {
+    //checking for duplicate favorites
+    const burgerNumber = req.body.burgerId;
+    const pastFavorite = await Favorite.findAll({
+      where: { userId: req.session.user_id },
+      attributes: ["BurgerId"],
+      raw: true,
+    });
+    let isNew = true;
+    pastFavorite.forEach((burger) => {
+      if (burger.BurgerId == burgerNumber) {
+        isNew = false;
+      }
+    });
+    console.log(isNew);
+
+    console.log(burgerNumber);
+
+    if (!isNew) {
+      res.status(400).json({ message: 0 });
+    } else {
+      const favoriteObject = {
+        userId: req.session.user_id,
+        BurgerId: req.body.burgerId,
+      };
+      const favoriteIsTrue = await Favorite.create(favoriteObject);
+      console.log(favoriteIsTrue);
+      if (!favoriteIsTrue) {
+        res.status(400).json({ message: 0 });
+      } else {
+        res.status(200).json({ message: 1 });
+      }
+    }
+    // creating object to create with user id from session and burger id from results.js
+    console.log(req.body);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 //favorites route for creating new entry into favorites table. We get burger id from fetch from results.js
 router.post("/favorite", async (req, res) => {
@@ -84,15 +110,15 @@ router.post("/favorite", async (req, res) => {
     } else {
       res.status(200);
     }
-    
+
     let isNew = true;
-    pastFavorite.forEach(burger=>{
-      if(burger.BurgerId == burgerNumber ){
-        isNew = false
+    pastFavorite.forEach((burger) => {
+      if (burger.BurgerId == burgerNumber) {
+        isNew = false;
       }
-    })
+    });
     console.log(isNew);
-    
+
     console.log(burgerNumber);
 
     if (!isNew) {
