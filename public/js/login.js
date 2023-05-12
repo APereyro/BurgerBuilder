@@ -38,7 +38,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace("/profile");
+      document.location.replace("/results");
     } else {
       alert(response.statusText);
     }
