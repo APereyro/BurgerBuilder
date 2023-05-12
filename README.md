@@ -7,6 +7,7 @@
 ## Description
 
 The BurgerBuilder App is a web application that allows users to sign up, create burger recipes, and view all burgers in the database, including pre-seeded ones. Users can also update and delete their recipes from the database and favorite or unfavorite recipes. Additionally, the application supports commenting, adding pictures or videos to posts, and sharing instructions on how to make user-created burgers.
+https://afternoon-peak-41409.herokuapp.com/
 
 ![Screenshot (66)](https://github.com/APereyro/BurgerBuilder/assets/124737955/566cc435-763b-4198-9ea4-e98ea041ae29)
 
