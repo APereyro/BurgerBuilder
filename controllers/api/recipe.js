@@ -56,7 +56,7 @@ router.put("/:id", async (req, res) => {
     res.status(400).json(error);
   }
 });
-
+//delete route and logic
 router.delete('/:id', async (req, res) => {
   try {
     const burgerData = await Burger.destroy({
