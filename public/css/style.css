@@ -110,6 +110,7 @@ img {
 .flex-wrap {
   flex-wrap:wrap;
   background-color: #f5efef;
+  margin-bottom: auto;
 } 
 
 .label {
