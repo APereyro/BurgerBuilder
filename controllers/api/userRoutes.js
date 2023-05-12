@@ -1,10 +1,8 @@
 const router = require("express").Router();
-const session = require("express-session");
 const { User, Favorite } = require("../../models");
 
-// router.get("/", async (req,res) => {
-//     res.send("hello")
-// })
+const session = require("express-session");
+const { User, Favorite } = require("../../models");
 
 router.post("/makerecipe", async (req, res) => {
   console.log(req.body);
@@ -27,48 +25,65 @@ router.post("/", async (req, res) => {
   }
 });
 
-    router.post('/login', async (req, res) => {
-      try {
-        const userData = await User.findOne({ where: { email: req.body.email } });
+router.post("/login", async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: "Incorrect email or password, please try again" });
+      return;
+    }
 
-        if (!userData) {
-          res
-            .status(400)
-            .json({ message: 'Incorrect email or password, please try again' });
-          return;
-        }
-    
-        const validPassword = await userData.checkPassword(req.body.password);
-    
-        if (!validPassword) {
-          res
-            .status(400)
-            .json({ message: 'Incorrect email or password, please try again' });
-          return;
-        }
-    
-        req.session.save(() => {
-          req.session.user_id = userData.id;
-          req.session.logged_in = true;
-          
-          res.json({ user: userData, message: 'You are now logged in!' });
-        });
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: "Incorrect email or password, please try again" });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      res.json({ user: userData, message: "You are now logged in!" });      
   } catch (err) {
     res.status(400).json(err);
   }
 });
 
 //favorites route for creating new entry into favorites table. We get burger id from fetch from results.js
+// router.post("/favorite", async (req, res) => {
+//   try {
+//     //checking for duplicate favorites
+//     const burgerNumber = req.body.burgerId 
+//     const pastFavorite = await Favorite.findAll({
+//       where: { userId: req.session.user_id },
+//       attributes: ["BurgerId"],
+//       raw: true,
+//     });
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
+
+//favorites route for creating new entry into favorites table. We get burger id from fetch from results.js
 router.post("/favorite", async (req, res) => {
   try {
-    //checking for duplicate favorites
-    const burgerNumber = req.body.burgerId 
-    const pastFavorite = await Favorite.findAll({
-      where: { userId: req.session.user_id },
-      attributes: ["BurgerId"],
-      raw: true,
-    });
-
+    //creating object to create with user id from session and burger id from results.js
+    console.log(req.body);
+    const favoriteObject = {
+      userId: req.session.user_id,
+      BurgerId: req.body.burgerId,
+    };
+    const favoriteIsTrue = await Favorite.create(favoriteObject);
+    console.log(favoriteIsTrue);
+    if (!favoriteIsTrue) {
+      res.status(400);
+    } else {
+      res.status(200);
+    }
+    
     let isNew = true;
     pastFavorite.forEach(burger=>{
       if(burger.BurgerId == burgerNumber ){
