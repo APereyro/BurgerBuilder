@@ -2,6 +2,15 @@ html {
   height: 100%;
 }
 
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #f5efef;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d8d8d8;
+}
+
 .navbar {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   background-color: #ff3131;
@@ -9,10 +18,14 @@ html {
   color: #f5efef;
   padding-bottom: 0px;
   position: fixed;
+  z-index: 1000;
 } 
 
 @media (max-width: 768px) {
   .navbar {
+    position:relative;
+  }
+  .footer {
     position:relative;
   } 
 }
@@ -33,6 +46,7 @@ body {
 .dropdown-content {
   background-color: #ff3131;
   color: #f5efef;
+  z-index: 1;
 }
 
 .dropdown-content:hover {
@@ -102,9 +116,11 @@ img {
   color: #3b312e;
 }
 
-/* .flex-wrap {
-  margin-top: 7.5rem;
-} */
+.flex-wrap {
+  flex-wrap:wrap;
+  background-color: #f5efef;
+  margin-bottom: auto;
+} 
 
 .label {
   color: #3b312e;
@@ -127,16 +143,38 @@ img {
   color: #f5efef;
 }
 
+/* favorite pop up styling */
+#resultPopUp{
+  text-align: center;
+  width: 300px;
+  border: solid black 2px;
+  border-radius: 12px;
+  box-shadow: 2px 5px 10px black;
+  font-size: 20px;
+  color: #f5efef;
+  background-color: #ff3131;
+  position:fixed;
+  z-index: 10;
+  right: 40%;
+}
+
+.resultHidden{
+  display: none;
+}
+
+/* end */
+
 .card.mt-3 {
   margin-top: 6rem;
 }
 
 .card .btn-primary {
-  margin-right: 15px;
+  margin-right: 150px;
   margin-top: 15px;
   color:#f5efef;
 }
 
+/* Favorite title text*/
 #favoriteTitle{
   z-index: 1;
   position: relative;
@@ -149,3 +187,38 @@ img {
   border: solid 1px black;
   box-shadow: 2px 2px 5px black;
 }
+/*end*/
+
+.card figure {
+  width: 96%;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card-body {
+  color:#3b312e;
+}
+
+.text-secondary {
+  color:#3b312e;
+}
+
+.text-third {
+  color:#ff3131;
+}
+
+.burger-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  margin-bottom: 20px;
+}
+
+.burger-container figure {
+  margin-right: 20px;
+  background-color: #f5efef;
+}
+
