@@ -19,7 +19,6 @@ The BurgerBuilder App is a web application that allows users to sign up, create 
 - [Credits](#credits)
 - [License](#license)
 - [HowtoContribute](#HowtoContribute)
-- [Tests](#Tests)
 - [Questions](#Questions)
 
 ## Installation
