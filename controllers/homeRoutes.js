@@ -10,8 +10,26 @@ router.get("/signup", async (req, res) => {
   res.render("signup");
 });
 
+router.get("/signout", async (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+});
+
 router.get("/ingredients", async (req, res) => {
   res.render("ingredients");
+});
+
+router.get("/update/:id", async (req, res) => {
+  const burgerId = req.params.id;
+  try {
+    const burgerData = await Burger.findByPk(burgerId, {});
+    const burger = burgerData.get({ plain: true });
+    res.render("update", {
+      ...burger,
+    });
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 router.get("/results", async (req, res) => {
@@ -35,6 +53,13 @@ router.get("/profile", async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
+
+// router.get("/favorites", async (req, res) => {
+//   try {
+//     const favoritesData = await Favorite.findAll();
+//     const favorites = favoritesData.map((favorite) => favorite.dataValues);
+//     res.render("favorites", { favorites });
+
 //favorites page route sending all favorite burgers based on users favorite list
 router.get("/favorites", async (req, res) => {
   try {
