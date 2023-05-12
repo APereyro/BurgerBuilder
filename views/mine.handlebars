@@ -1,4 +1,4 @@
-<container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
+<container id="cardDiv" class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
   {{#each burger}}
     <figure><img src="{{image}}" alt="burger" class="mt-2 rounded"/></figure>
     <div class="card-body">
@@ -8,6 +8,7 @@
       <p class="text-secondary">{{ingredients}}</p>
       <div class="card-actions justify-end">
       <button class="btn btn-primary update"  type="button" data-id={{id}}>Update Recipe</button>
+      <button class="btn btn-primary"  type="button" name="{{id}}">Delete Recipe</button>
       </div>
     </div>
   {{/each}}
