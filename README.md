@@ -61,6 +61,6 @@ Contributions to the BurgerBuilder App are welcome. If you find a bug or would l
 
 ## Questions
 
-If you have any questions or comments, please feel free to reach out to me or our team at alanpereyro0@gmail.com,  . 
-You can also find me and our team members on https://github.com/APereyro ,where we are happy to collaborate on projects."
+If you have any questions or comments, please feel free to reach out to me or our team at alanpereyro0@gmail.com, jesseemerson7@gmail.com, aydenemateo@gmail.com, adnd adamxabulkheir@gmail.com . 
+You can also find me and our team members on https://github.com/APereyro , https://github.com/jesseemerson7 , https://github.com/aydenemateo , https://github.com/adamabulkheir where we are happy to collaborate on projects."
 
