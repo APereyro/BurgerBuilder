@@ -2,12 +2,13 @@ const router = require("express").Router();
 const { User, Ingredient, Burger, Favorite } = require("../models");
 // const withAuth = require('../utils/auth');
 
-router.get("/", async (req, res) => {
-  res.render("homepage");
+router.get("/", async (req, res) => {console.log("Session: ", req.session);
+
+  res.render("homepage", { user: req.session.logged_in  });
 });
 
 router.get("/signup", async (req, res) => {
-  res.render("signup");
+  res.render("signup",  { user: req.session.logged_in  });
 });
 
 router.get("/signout", async (req, res) => {
@@ -16,7 +17,7 @@ router.get("/signout", async (req, res) => {
 });
 
 router.get("/ingredients", async (req, res) => {
-  res.render("ingredients");
+  res.render("ingredients",  { user: req.session.logged_in  });
 });
 
 router.get("/update/:id", async (req, res) => {
@@ -26,6 +27,7 @@ router.get("/update/:id", async (req, res) => {
     const burger = burgerData.get({ plain: true });
     res.render("update", {
       ...burger,
+      user: req.session.logged_in  
     });
   } catch (error) {
     res.status(500).json(error);
@@ -36,7 +38,8 @@ router.get("/results", async (req, res) => {
   try {
     const burgerData = await Burger.findAll();
     const burgers = burgerData.map((burger) => burger.dataValues);
-    res.render("results", { burger: burgers });
+    console.log("session", req.session);
+    res.render("results", { burger: burgers, user: req.session.logged_in });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
@@ -47,7 +50,7 @@ router.get("/profile", async (req, res) => {
   try {
     const burgerData = await Burger.findAll();
     const burgers = burgerData.map((burger) => burger.dataValues);
-    res.render("profile", { burger: burgers });
+    res.render("profile", { burger: burgers, user: req.session.logged_in  });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
@@ -80,7 +83,7 @@ router.get("/favorites", async (req, res) => {
       raw: true,
     });
     //render page with all burger info.
-    res.render("favorites", { favorites: burgerArray });
+    res.render("favorites", { favorites: burgerArray,  user: req.session.logged_in   });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
@@ -103,6 +106,7 @@ router.get("/mine", async (req, res) => {
     // res.json(burgerData);
     res.render("mine", {
       burger: burgerData.map((burger) => burger.toJSON()),
+      user: req.session.logged_in
     });
   } catch (error) {
     console.log(error);

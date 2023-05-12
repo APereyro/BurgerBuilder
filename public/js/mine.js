@@ -8,7 +8,6 @@ const updateBurger = async (e) => {
     }
 }
 
-
 const updates = document.querySelectorAll('button[data-id]')
 // .addEventListener('click', updateBurger)
 console.log(updates);

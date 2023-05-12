@@ -57,12 +57,13 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// router.delete('/:id', withAuth, async (req, res) => {
+// router.delete('/:id', async (req, res) => {
+//   console.log("im hit");
+//   console.log(req.params);
 //   try {
 //     const burgerData = await Burger.destroy({
 //       where: {
 //         id: req.params.id,
-//         user_id: req.session.user_id,
 //       },
 //     });
 
