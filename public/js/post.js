@@ -7,9 +7,7 @@ const burgerFormHandeler = async (event) => {
   const ingredients = document.getElementById("ingredients").value.trim();
   console.log(name, description, ingredients);
 
-
   try {
-    window.location.href = "/mine";
     const response = await fetch("/api/recipe/", {
       method: "POST",
       body: JSON.stringify({
@@ -19,42 +17,19 @@ const burgerFormHandeler = async (event) => {
       }),
       headers: { "Content-Type": "application/json" },
     });
-    if (!response.ok) {
+    const data = await response.json();
+    console.log(data);
+    if (!data.message == 1) {
       throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      console.log("END OF FUN()");
+      window.location.href = "/mine";
     }
-    console.log("END OF FUN()");
-
   } catch (error) {
     console.log("Error", error);
   }
 };
 
-
-
-// const delButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-id')) {
-//     const id = event.target.getAttribute('data-id');
-
-//     const response = await fetch(`/api/recipe/${id}`, {
-//       method: 'DELETE',
-//     });
-
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete project');
-//     }
-//   }
-// };
-
-// document
-//   .querySelector('.project-list')
-//   .addEventListener('click', delButtonHandler);
-
-
 document
   .getElementById("burger")
   .addEventListener("submit", burgerFormHandeler);
-
-
-
