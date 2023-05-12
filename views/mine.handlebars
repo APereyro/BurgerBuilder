@@ -1,8 +1,7 @@
-<container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
   {{#each burger}}
+<container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
     <figure><img src="{{image}}" alt="burger" class="mt-2 rounded"/></figure>
     <div class="card-body">
-      {{id}}
       <h2 class="card-title text-secondary">{{name}}</h2>
       <p class="text-secondary">{{description}}</p>
       <p class="text-secondary">{{ingredients}}</p>
@@ -10,7 +9,7 @@
       <button class="btn btn-primary update"  type="button" data-id={{id}}>Update Recipe</button>
       </div>
     </div>
-  {{/each}}
 </container>
+  {{/each}}
 
 <script src="./js/mine.js"></script>
