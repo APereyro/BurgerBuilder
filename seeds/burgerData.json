@@ -4,7 +4,7 @@
         "description":"Blackened seasoning and blue cheese is a great combo.",
         "recipe":"https://www.certifiedangusbeef.com/recipes/Black-and-Blue-Burger",
         "image":"https://www.certifiedangusbeef.com/recipes/images/recipes/0ce41988-d726-41d3-9f88-9bc5207f332e.jpg",
-        "ingredients":["lettuce","tomato"]
+        "ingredients":"lettuce tomato"
     },
     {
         "name":"Classic Burger",

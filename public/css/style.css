@@ -1,31 +1,70 @@
 html {
-    height: 100%;
-  }
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+  background-color: #f5efef;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d8d8d8;
+}
 
 .navbar {
-  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   background-color: #ff3131;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #f5efef;
+  padding-bottom: 0px;
+  position: fixed;
+  z-index: 1000;
+} 
+
+@media (max-width: 768px) {
+  .navbar {
+    position:relative;
+  }
+  .footer {
+    position:relative;
+  } 
 }
-  body {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background-color: #f5efef;
-    color:#3b312e;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    zoom: 105%;
-  }
-  
-  main {
-    flex: 1;
-    background-color: #f5efef;
-  }
-  
-  footer {
-    margin-top: auto;
-  }
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f5efef;
+  color: #3b312e;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  zoom: 105%;
+}
+
+
+
+.dropdown-content {
+  background-color: #ff3131;
+  color: #f5efef;
+  z-index: 1;
+}
+
+.dropdown-content:hover {
+  background-color: #3b312e;
+  color:#f5efef;
+}
+
+main {
+  flex: 1;
+  background-color: #f5efef;
+}
+
+img {
+    margin-left: 15px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+}
 
 .hero {
   /* background-color: #f5efef; */
@@ -33,10 +72,10 @@ html {
 }
 
 .hero-overlay {
-background-image: url(/images/leftdivbg.png);
-background-size: cover;
-background-position: center;
-color: #3b312e;
+  background-image: url(/images/leftdivbg.png);
+  background-size: cover;
+  background-position: center;
+  color: #3b312e;
 }
 
 
@@ -46,33 +85,42 @@ color: #3b312e;
 
 
 .max-w-md {
-  color:#3b312e;
-  
-  
+  color: #3b312e;
+}
 
-
+.container.flex.mx-4 {
+  margin-top: 7.5rem;
 }
 
 .btn {
-background-color: #ff3131;
+  background-color: #ff3131;
 
 }
+
 .btn.btn-primary {
   background-color: #ff3131;
 }
+
 .btn-primary {
-  color:#3b312e;
+  color: #f5efef;
   background-color: #ff3131;
 }
+
 .btn-primary:hover {
   background-color: #3b312e;
-  color:#f5efef;
+  color: #f5efef;
 }
 
 .form {
   background-color: #f5efef;
-  color:#3b312e;
+  color: #3b312e;
 }
+
+.flex-wrap {
+  flex-wrap:wrap;
+  background-color: #f5efef;
+  margin-bottom: auto;
+} 
 
 .label {
   color: #3b312e;
@@ -80,23 +128,104 @@ background-color: #ff3131;
 }
 
 .card {
-  color:#3b312e;
+  color: #3b312e;
   background-color: #f5efef;
+  margin-top: 6rem;
 }
 
 .input {
   background-color: #f5efef;
-  color:#3b312e;
+  color: #3b312e;
 }
 
 .footer {
   background-color: #3b312e;
+  color: #f5efef;
+}
+
+/* favorite pop up styling */
+#resultPopUp{
+  text-align: center;
+  width: 300px;
+  border: solid black 2px;
+  border-radius: 12px;
+  box-shadow: 2px 5px 10px black;
+  font-size: 20px;
+  color: #f5efef;
+  background-color: #ff3131;
+  position:fixed;
+  z-index: 10;
+  right: 40%;
+}
+
+.resultHidden{
+  display: none;
+}
+
+/* end */
+
+.card.mt-3 {
+  margin-top: 6rem;
+}
+
+.card .btn-primary {
+  margin-right: 150px;
+  margin-top: 15px;
   color:#f5efef;
 }
 
-#resultsContainer {
+/* #resultsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   overflow: auto;
+} */
+
+/* Favorite title text*/
+#favoriteTitle{
+  z-index: 1;
+  position: relative;
+  margin: auto;
+  bottom: -80px;
+  padding: 6px;
+  background-color: #ff3131;
+  color: #f5efef;
+  border-radius: 16px;
+  border: solid 1px black;
+  box-shadow: 2px 2px 5px black;
 }
+/*end*/
+
+.card figure {
+  width: 96%;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.card-body {
+  color:#3b312e;
+}
+
+.text-secondary {
+  color:#3b312e;
+}
+
+.text-third {
+  color:#ff3131;
+}
+
+.burger-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items:center;
+  margin-bottom: 20px;
+}
+
+.burger-container figure {
+  margin-right: 20px;
+  background-color: #f5efef;
+}
+

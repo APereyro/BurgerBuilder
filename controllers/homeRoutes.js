@@ -54,11 +54,33 @@ router.get("/profile", async (req, res) => {
   }
 });
 
+// router.get("/favorites", async (req, res) => {
+//   try {
+//     const favoritesData = await Favorite.findAll();
+//     const favorites = favoritesData.map((favorite) => favorite.dataValues);
+//     res.render("favorites", { favorites });
+
+//favorites page route sending all favorite burgers based on users favorite list
 router.get("/favorites", async (req, res) => {
   try {
-    const favoritesData = await Favorite.findAll();
-    const favorites = favoritesData.map((favorite) => favorite.dataValues);
-    res.render("favorites", { favorites });
+    //find all favorite burger id
+    const UserFavorite = await Favorite.findAll({
+      where: {
+        userId: req.session.user_id,
+      },
+      raw: true,
+    });
+    //map over to create an array of burger id's that are fav by user
+    const burgerFavorites = UserFavorite.map((fav) => fav.BurgerId);
+    //find all burgers where id matches that array of burgers
+    const burgerArray = await Burger.findAll({
+      where: {
+        id: burgerFavorites,
+      },
+      raw: true,
+    });
+    //render page with all burger info.
+    res.render("favorites", { favorites: burgerArray });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: "Internal server error" });
