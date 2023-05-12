@@ -34,4 +34,3 @@ const deleteBurger = async (e) => {
   }
 };
 
-cardDiv.addEventListener("click", deleteBurger);

@@ -56,16 +56,6 @@ router.put("/:id", async (req, res) => {
     res.status(400).json(error);
   }
 });
-
-router.delete('/:id', async (req, res) => {
-  try {
-    const burgerData = await Burger.destroy({
-      where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
-    });
-
     if (!burgerData) {
       res.status(404).json({ message: 'No burger found with this id!' });
       return;
