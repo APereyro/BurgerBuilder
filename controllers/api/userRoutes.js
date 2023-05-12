@@ -80,7 +80,7 @@ router.post("/favorite", async (req, res) => {
     console.log(burgerNumber);
 
     if (!isNew) {
-      res.status(400).json({ message: "duplicate" });
+      res.status(400).json({ message: 0 });
     } else {
       const favoriteObject = {
         userId: req.session.user_id,
@@ -91,7 +91,7 @@ router.post("/favorite", async (req, res) => {
       if (!favoriteIsTrue) {
         res.status(400);
       } else {
-        res.status(200).json({ message: "Favorite Added!" });
+        res.status(200).json({ message: 1 });
       }
     }
     // creating object to create with user id from session and burger id from results.js
