@@ -2,7 +2,9 @@
      <div id="resultPopUp" class="resultHidden">
       <p id="popUpText"></p>
     </div>
-    <container id="resultsContainer" class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
+    <div id="resultsContainer" class="flex flex-wrap">
+{{#each burger}}
+    <container class="card w-80 ml-3 mt-3 bg-warning shadow-xl">
         <figure><img src="{{image}}" alt="burger" class="mt-2 rounded"/></figure>
         <div class="card-body">
           <h2 class="card-title">{{name}}</h2>
@@ -14,4 +16,5 @@
         </div>
     </container>
         {{/each}}
+        </div>
     <script src="./js/results.js"></script>
